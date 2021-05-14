@@ -34,8 +34,13 @@ import os
 
 
 path = os.getcwd()
-housing = pd.read_csv(os.path.join(path, "housing_final.csv"))
-licenses = pd.read_csv(os.path.join(path,"licenses_final.csv"))
+housing = pd.read_csv("housing_final.csv")
+licenses = pd.read_csv("licenses_final.csv")
+
+
+#housing = pd.read_csv('/home/akc/mysite/data/housing_final.csv')
+#licenses = pd.read_csv('/home/akc/mysite/data/licenses_final.csv')
+
 trading_mapping = {"Bottle shop": 0,
                   "Wholesaler": 0,
                   "Trading to 11PM": 1,
@@ -65,8 +70,9 @@ df_merge['Properties per Bar'] = df_merge['Propertycount'] / df_merge['Bars']
 # In[6]:
 
 
-shape_path = r"AUS Shape files/AUS_adm2.shp"
-shapes = gpd.read_file(os.path.join(path, shape_path))
+#shape_path = r"AUS Shape files/AUS_adm2.shp"
+shapes = gpd.read_file("AUS_adm2.shp")
+#shapes = gpd.read_file('/home/akc/mysite/data/AUS_adm2.shp')
 shapes = shapes[shapes.NAME_1 == "Victoria"].reset_index(drop=True)
 shapes.NAME_2 = shapes.NAME_2.str.replace("S'bank-D'lands", "Southbank - Docklands")
 
