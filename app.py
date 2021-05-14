@@ -246,7 +246,7 @@ general_stats_layout = html.Div(style=app_style,children=[
                 },
             ),
             html.P(
-                'Select your preferred suburb and see which features has the biggest influence on the price of the different property types - Or scroll through a few areas to see the difference in the parameter importance',
+                'Select your preferred suburb and see which features has the biggest influence on the price of the different property types - Or scroll through a few areas to see the difference in the parameter importance. Please be aware that the page might take a while to load.',
                 className='eight columns',
             ),
         ],
